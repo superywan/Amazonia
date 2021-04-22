@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Rating from "../components/Rating";
 import "../style/productScreen.css";
-import products from "../products";
 
 const ProductScreen = ({ match }) => {
-  const product = products.find((item) => item._id === match.params.id);
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const { data } = await axios.get(`/api/products/${match.params.id}`);
+        setProduct(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProduct();
+  }, [match]);
+
   const price = String(product.price).split(".");
   let stock = { text: "In stock", color: "green" };
   if (product.countInStock === 0) {
