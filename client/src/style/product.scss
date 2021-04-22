@@ -1,0 +1,25 @@
+.item {
+  margin-bottom: 50px;
+  margin: 0 10px 50px 10px;
+
+  &__image {
+    width: 300px;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin: 5px 0;
+  }
+
+  &__rating {
+    margin: 5px 0;
+    i {
+      color: rgb(254, 164, 28);
+    }
+  }
+
+  &__price {
+    font-size: 21px;
+    font-weight: 600;
+  }
+}

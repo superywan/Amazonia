@@ -1,0 +1,18 @@
+.home {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3%;
+
+  &__title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,24 @@
+.home {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+
+.home__title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.home__products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=homeScreen.css.map */
