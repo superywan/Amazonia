@@ -5,6 +5,14 @@
 
   flex-wrap: wrap;
 
+  &__error {
+    width: 70%;
+    text-align: center;
+    padding: 20px 100px;
+    border-radius: 0.5rem;
+    background: rgb(255, 170, 170);
+  }
+
   &__left {
     &--image {
       width: 100%;

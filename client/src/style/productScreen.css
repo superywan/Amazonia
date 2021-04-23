@@ -10,6 +10,14 @@
       flex-wrap: wrap;
 }
 
+.productScreen__error {
+  width: 70%;
+  text-align: center;
+  padding: 20px 100px;
+  border-radius: 0.5rem;
+  background: #ffaaaa;
+}
+
 .productScreen__left--image {
   width: 100%;
 }
