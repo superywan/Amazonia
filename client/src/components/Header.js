@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import companyLogo from "../images/amazon_logo.png";
-import "../style/header.css";
+import "../styles/components/header/header.css";
 
 const Header = () => {
   return (

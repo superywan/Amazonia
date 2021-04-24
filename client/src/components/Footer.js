@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import companyLogo from "../images/amazon_logo.png";
-import "../style/footer.css";
+import "../styles/components/footer/footer.css";
 
 const Footer = () => {
   return (

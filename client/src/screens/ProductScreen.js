@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../redux/actions/productActions";
 import Rating from "../components/Rating";
-import "../style/productScreen.css";
+import "../styles/screens/productScreen/productScreen.css";
 
 const ProductScreen = ({ match }) => {
   const dispatch = useDispatch();

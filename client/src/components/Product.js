@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
-import "../style/product.css";
+import "../styles/components/product/product.css";
 
 const Product = ({ product }) => {
   const price = String(product.price).split(".");
