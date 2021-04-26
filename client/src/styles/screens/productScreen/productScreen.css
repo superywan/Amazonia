@@ -49,6 +49,17 @@
   margin-bottom: 10px;
 }
 
+.productScreen__right--qty {
+  margin: 1.5em 0;
+}
+
+.productScreen__right--qty select {
+  margin-left: 0.5rem;
+  text-align: center;
+  text-align-last: center;
+  width: 10%;
+}
+
 .productScreen__right--cart {
   font-size: 20px;
   font-weight: 600;

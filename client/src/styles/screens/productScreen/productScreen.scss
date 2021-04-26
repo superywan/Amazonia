@@ -45,6 +45,17 @@
       margin-bottom: 10px;
     }
 
+    &--qty {
+      margin: 1.5em 0;
+
+      select {
+        margin-left: 0.5rem;
+        text-align: center;
+        text-align-last: center;
+        width: 10%;
+      }
+    }
+
     &--cart {
       font-size: 20px;
       font-weight: 600;

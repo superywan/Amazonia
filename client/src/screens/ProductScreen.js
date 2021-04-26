@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../redux/actions/productActions";
 import Rating from "../components/Rating";
+import { addToCart } from "../redux/actions/cartActions";
 import "../styles/screens/productScreen/productScreen.css";
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = ({ history, match }) => {
+  const [qty, setQty] = useState(1);
+
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -22,6 +25,11 @@ const ProductScreen = ({ match }) => {
       stock = { text: "Out of Stock", color: "red" };
     }
   }
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty));
+    history.push("/cart");
+  };
 
   return (
     <div className="productScreen">
@@ -57,9 +65,25 @@ const ProductScreen = ({ match }) => {
             >
               {stock.text}
             </div>
+            {product.countInStock > 0 && (
+              <div className="productScreen__right--qty">
+                Qty:
+                <select
+                  value={qty}
+                  onChange={(e) => setQty(Number(e.target.value))}
+                >
+                  {[...Array(product.countInStock).keys()].map((num) => (
+                    <option key={num + 1} value={num + 1}>
+                      {num + 1}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
             <button
               className="productScreen__right--cart"
               disabled={product.countInStock === 0}
+              onClick={addToCartHandler}
             >
               Add to Cart
             </button>
