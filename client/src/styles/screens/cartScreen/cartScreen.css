@@ -1,14 +1,18 @@
 .cart {
   width: 60%;
-  margin: 2em auto;
+  margin: auto;
+  margin-top: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cart__empty {
+  text-align: center;
 }
 
 .cart__empty--link {
@@ -36,6 +40,7 @@
 
 .cart__left .product__image {
   width: 25%;
+  min-width: 200px;
   height: auto;
   margin: auto 0;
   margin-right: 20px;

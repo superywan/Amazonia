@@ -1,11 +1,13 @@
 .cart {
   width: 60%;
-  margin: 2em auto;
+  margin: auto;
+  margin-top: 3%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   &__empty {
+    text-align: center;
     &--link {
       background: rgb(0, 140, 255);
       color: rgb(255, 255, 255);
@@ -27,6 +29,7 @@
 
       &__image {
         width: 25%;
+        min-width: 200px;
         height: auto;
         margin: auto 0;
         margin-right: 20px;

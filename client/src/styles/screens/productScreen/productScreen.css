@@ -65,12 +65,12 @@
   font-weight: 600;
   width: 100%;
   height: 50px;
-  background: #f5d68b;
+  background: #f0c14b;
   border: none;
   margin-bottom: 10px;
 }
 
 .productScreen__right--cart:hover {
-  background: #f7c03f;
+  background: #f5d68b;
 }
 /*# sourceMappingURL=productScreen.css.map */

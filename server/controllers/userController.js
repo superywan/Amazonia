@@ -20,7 +20,7 @@ export const authenticateUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(404);
-    throw new Error("Invalid Email Or Password");
+    throw new Error("Invalid Email or Password");
   }
 });
 

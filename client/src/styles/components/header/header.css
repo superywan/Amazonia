@@ -26,6 +26,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__right a {
@@ -37,6 +42,78 @@
   width: 80px;
   padding: 3px 0;
   text-align: center;
+}
+
+.header__right--dropdown {
+  position: relative;
+}
+
+.header__right--dropdown .dropdown__button {
+  padding: 3px 8px 3px 5px;
+  background: none;
+  border: none;
+  color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.header__right--dropdown .dropdown__button:hover {
+  border: 1px solid white;
+}
+
+.header__right--dropdown .dropdown__button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header__right--dropdown .dropdown__content {
+  background: #131921;
+  width: 100px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+}
+
+.header__right--dropdown .dropdown__content--item {
+  color: white;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header__right--dropdown .dropdown__content--item a:hover {
+  border: none;
+}
+
+.header__right--dropdown .dropdown__content--item:hover {
+  background-color: #283546;
+  border: 0.5px solid white;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .header__right--cart {
