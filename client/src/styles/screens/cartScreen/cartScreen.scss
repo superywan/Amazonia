@@ -1,5 +1,6 @@
 .cart {
   width: 60%;
+  max-width: 1400px;
   margin: auto;
   margin-top: 3%;
   display: flex;
@@ -50,7 +51,9 @@
           margin-right: 1em;
           width: 4em;
           height: 2em;
+          cursor: pointer;
         }
+
         &--remove {
           width: 6em;
           height: 2em;
@@ -59,6 +62,7 @@
           border: none;
           border-radius: 5px;
           background: rgb(255, 54, 54);
+          cursor: pointer;
         }
       }
     }

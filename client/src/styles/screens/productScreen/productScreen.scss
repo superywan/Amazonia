@@ -49,6 +49,7 @@
       margin: 1.5em 0;
 
       select {
+        cursor: pointer;
         margin-left: 0.5rem;
         text-align: center;
         text-align-last: center;
@@ -64,6 +65,7 @@
       background: #f0c14b;
       border: none;
       margin-bottom: 10px;
+      cursor: pointer;
     }
     &--cart:hover {
       background: rgb(245, 214, 139);

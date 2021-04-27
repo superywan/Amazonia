@@ -70,6 +70,7 @@
   border: none;
   border-radius: 3px;
   margin-bottom: 3%;
+  cursor: pointer;
 }
 
 .login__form--submit:hover {

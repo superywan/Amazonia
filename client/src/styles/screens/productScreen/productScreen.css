@@ -54,6 +54,7 @@
 }
 
 .productScreen__right--qty select {
+  cursor: pointer;
   margin-left: 0.5rem;
   text-align: center;
   text-align-last: center;
@@ -68,6 +69,7 @@
   background: #f0c14b;
   border: none;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .productScreen__right--cart:hover {
