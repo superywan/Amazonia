@@ -9,13 +9,14 @@
   }
 
   &__error {
-    color: rgb(196, 0, 0);
-    width: 400px;
+    max-width: 300px;
+    color: #712b29;
     text-align: center;
+    background-color: #f7dddc;
+    border-color: #f4cfce;
+    padding: 0.75rem 1.25rem;
     margin: auto;
-    margin-bottom: 20px;
-    padding: 5px 10px;
-    border-radius: 5px;
+    margin-bottom: 1rem;
   }
 
   &__loading {

@@ -12,7 +12,6 @@ const Header = () => {
 
   const logoutHandler = () => {
     dispatch(logout());
-    alert("Successfully Logged Out");
   };
   return (
     <header>

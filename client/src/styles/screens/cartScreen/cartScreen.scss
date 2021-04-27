@@ -1,14 +1,15 @@
 .cart {
-  width: 60%;
+  width: 80%;
   max-width: 1400px;
   margin: auto;
   margin-top: 3%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 
   &__empty {
     text-align: center;
+
     &--link {
       background: rgb(0, 140, 255);
       color: rgb(255, 255, 255);
@@ -21,13 +22,17 @@
 
   &__left {
     width: 70%;
-    padding: 12px 0;
+    background: rgb(230, 230, 230);
+    padding: 10px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
 
     .product {
       display: flex;
       flex-wrap: wrap;
-      padding: 10px 15px;
+      padding: 10px;
       background: rgb(255, 255, 255);
+      border-radius: 5px;
 
       &__image {
         width: 25%;
@@ -39,7 +44,7 @@
 
       &__content {
         &--name {
-          margin-bottom: 0;
+          margin-bottom: 5px;
         }
 
         &--price {
@@ -70,7 +75,21 @@
   }
 
   &__right {
-    width: 21%;
+    width: 25%;
+    background: rgb(230, 230, 230);
+    margin-left: 15px;
+    padding: 10px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+
+    &--top {
+      background: rgb(255, 255, 255);
+      padding: 10px;
+      border: 1px solid rgb(189, 189, 189);
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+    }
   }
 }
 
@@ -78,14 +97,21 @@
   width: 100%;
 }
 
-@media (max-width: 1125px) {
+@media (max-width: 1499px) {
   .cart {
     width: 80%;
     flex-direction: column;
 
-    &__left,
+    &__left {
+      width: 90%;
+      max-width: none;
+      margin: 0;
+    }
+
     &__right {
       width: 90%;
+      margin: 0;
+      margin-top: 15px;
     }
   }
 }

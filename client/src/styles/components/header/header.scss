@@ -6,8 +6,10 @@
   align-items: center;
   background: rgb(19, 25, 33);
 
-  a:hover {
-    border: 0.5px solid white;
+  a {
+    color: rgb(246, 246, 246);
+    font-weight: 700;
+    cursor: pointer;
   }
 
   &__left {
@@ -21,11 +23,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    a {
-      color: rgb(246, 246, 246);
-      font-weight: 700;
-    }
 
     &--signIn {
       width: 80px;
@@ -44,10 +41,7 @@
         font-size: 16px;
         font-weight: 700;
         font-family: inherit;
-
-        &:hover {
-          border: 1px solid white;
-        }
+        cursor: pointer;
 
         &:focus + ul {
           opacity: 1;
@@ -73,7 +67,7 @@
         &--item {
           color: white;
           font-weight: 700;
-          width: 100%;
+          width: 100px;
           height: 100%;
           display: flex;
           justify-content: center;
@@ -86,7 +80,6 @@
 
           &:hover {
             background-color: rgb(40, 53, 70);
-            border: 0.5px solid white;
             opacity: 1;
             pointer-events: all;
           }

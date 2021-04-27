@@ -13,8 +13,10 @@
   background: #131921;
 }
 
-.header a:hover {
-  border: 0.5px solid white;
+.header a {
+  color: #f6f6f6;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .header__left--image {
@@ -31,11 +33,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header__right a {
-  color: #f6f6f6;
-  font-weight: 700;
 }
 
 .header__right--signIn {
@@ -56,10 +53,7 @@
   font-size: 16px;
   font-weight: 700;
   font-family: inherit;
-}
-
-.header__right--dropdown .dropdown__button:hover {
-  border: 1px solid white;
+  cursor: pointer;
 }
 
 .header__right--dropdown .dropdown__button:focus + ul {
@@ -91,7 +85,7 @@
 .header__right--dropdown .dropdown__content--item {
   color: white;
   font-weight: 700;
-  width: 100%;
+  width: 100px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,7 +105,6 @@
 
 .header__right--dropdown .dropdown__content--item:hover {
   background-color: #283546;
-  border: 0.5px solid white;
   opacity: 1;
   pointer-events: all;
 }

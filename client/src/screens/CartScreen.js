@@ -70,21 +70,21 @@ const CartScreen = () => {
             </div>
           </div>
           <div className="cart__right">
-            <h2 className="cart__right--subtotal">
-              Subtotal (
+            <div className="cart__right--top">
+              Subtotal{" ("}
               {cartItems.reduce((acc, currentItem) => acc + currentItem.qty, 0)}
-              )
-            </h2>
-            <h3 className="cart__right--totalPrice">
-              $
-              {cartItems
-                .reduce(
-                  (acc, currentItem) =>
-                    acc + currentItem.price * currentItem.qty,
-                  0
-                )
-                .toFixed(2)}
-            </h3>
+              {" item): "}
+              <span style={{ fontWeight: 700 }}>
+                $
+                {cartItems
+                  .reduce(
+                    (acc, currentItem) =>
+                      acc + currentItem.price * currentItem.qty,
+                    0
+                  )
+                  .toFixed(2)}
+              </span>
+            </div>
           </div>
         </>
       )}
