@@ -12,7 +12,7 @@ const LoginScreen = ({ location, history }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
-  const redirect = location.search ? location.search.splite("=")[1] : "/";
+  const redirect = location.search ? location.search.split("=")[1] : "/";
 
   useEffect(() => {
     if (userInfo) {
@@ -52,13 +52,16 @@ const LoginScreen = ({ location, history }) => {
         <button className="login__form--submit" type="submit">
           Sign-In
         </button>
+        <div className="login__register">
+          New to Amazon?
+          <Link
+            className="login__register--link"
+            to={redirect ? `/register?redirect=${redirect}` : "register"}
+          >
+            Create your Amazon account
+          </Link>
+        </div>
       </form>
-      <div className="login__register">
-        New to Amazon?{" "}
-        <Link to={redirect ? `/register?redirect=${redirect}` : "register"}>
-          Create your Amazon account
-        </Link>
-      </div>
     </div>
   );
 };

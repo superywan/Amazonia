@@ -1,15 +1,15 @@
-.login {
+.register {
   width: 50%;
   margin: auto;
   margin-top: 3%;
 }
 
-.login__title {
+.register__title {
   text-align: center;
   font-size: 28px;
 }
 
-.login__error {
+.register__error {
   color: #c40000;
   width: 400px;
   text-align: center;
@@ -19,11 +19,18 @@
   border-radius: 5px;
 }
 
-.login__loading {
+.register__message {
+  color: #c40000;
+  font-size: 12px;
+  text-align: left;
+  margin: 5px 0 10px;
+}
+
+.register__loading {
   text-align: center;
 }
 
-.login__form {
+.register__form {
   width: 80%;
   max-width: 400px;
   margin: auto;
@@ -39,17 +46,17 @@
           align-items: center;
 }
 
-.login__form--label {
+.register__form--label {
+  font-size: 13px;
+  font-weight: 700;
   width: 80%;
   max-width: 400px;
   min-width: 200px;
   margin-right: 15px;
   margin-bottom: 5px;
-  font-size: 13px;
-  font-weight: 700;
 }
 
-.login__form--input {
+.register__form--input {
   width: 80%;
   max-width: 400px;
   min-width: 200px;
@@ -60,9 +67,9 @@
   border-radius: 3px;
 }
 
-.login__form--submit {
+.register__form--submit {
   width: 85%;
-  max-width: 420px;
+  max-width: 400px;
   min-width: 212px;
   height: 35px;
   color: #111;
@@ -76,29 +83,22 @@
   border: 1px solid #a2a6ac;
 }
 
-.login__form--submit:hover {
+.register__form--submit:hover {
   background: #f5d68b;
 }
 
-.login__register {
-  color: #767676;
-  font-size: 12px;
+.register__login {
+  font-size: 13px;
   text-align: center;
 }
 
-.login__register--link {
-  min-width: 200px;
-  display: block;
-  line-height: 29px;
-  font-weight: 600;
-  margin-top: 10px;
-  padding: 0 10px;
-  background: #e7e9ec;
-  border: 1px solid #a2a6ac;
-  border-radius: 3px;
+.register__login--link {
+  color: #0066c0;
 }
 
-.login__register--link:hover {
-  background: #d9dbdf;
+.register__login--link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #c45500;
 }
-/*# sourceMappingURL=loginScreen.css.map */
+/*# sourceMappingURL=registerScreen.css.map */
