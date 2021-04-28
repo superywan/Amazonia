@@ -4,6 +4,7 @@ import {
   getUserProfile,
   updateUserProfile,
 } from "../redux/actions/userActions";
+import { USER_PROFILE_UPDATE_RESET } from "../redux/constants/userConstants";
 import "../styles/screens/profileScreen/profileScreen.css";
 
 const ProfileScreen = ({ location, history }) => {
@@ -42,6 +43,7 @@ const ProfileScreen = ({ location, history }) => {
     if (password !== confirmPassword) {
       setMessage("Passwords must match");
     } else {
+      dispatch({ type: USER_PROFILE_UPDATE_RESET });
       dispatch(updateUserProfile({ id: user.id, name, email, password }));
     }
   };

@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 import "../styles/screens/cartScreen/cartScreen.css";
 
-const CartScreen = () => {
+const CartScreen = ({ history }) => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
   const removeItemHandler = (id) => {
     dispatch(removeFromCart(id));
+  };
+
+  const checkoutHandler = () => {
+    history.push("/login?redirect=shipping");
   };
 
   return (
@@ -84,6 +88,15 @@ const CartScreen = () => {
                   )
                   .toFixed(2)}
               </span>
+            </div>
+            <div className="cart__right--bottom">
+              <button
+                className="cart__right--bottom__checkout"
+                disabled={cartItems.length === 0}
+                onClick={checkoutHandler}
+              >
+                Proceed to checkout
+              </button>
             </div>
           </div>
         </>

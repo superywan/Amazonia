@@ -10,10 +10,13 @@
 }
 
 .home__error {
+  color: #712b29;
   text-align: center;
-  padding: 20px 100px;
-  border-radius: 0.5rem;
-  background: #ffaaaa;
+  background-color: #f7dddc;
+  border-color: #f4cfce;
+  padding: 0.75rem 1.25rem;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 .home__title {
