@@ -3,13 +3,17 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
-
+// Access to .env file
 dotenv.config();
 
 const app = express();
+
+// Access to req.body
 app.use(express.json());
 
+// Connecting to MongoDB
 connectDB();
 
 app.get("/", (req, res) => {
@@ -21,6 +25,9 @@ app.use("/api/products", productRoutes);
 
 // User Routes
 app.use("/api/users", userRoutes);
+
+// Order Routes
+app.use("/api/orders", orderRoutes);
 
 // Error Handling Middlewares
 app.use(notFound);

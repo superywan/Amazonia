@@ -104,8 +104,9 @@
   width: 100%;
   margin: auto;
   padding: 5px 10px;
-  border: 1px solid #a2dda6ac;
+  border: 1px solid #a2a6ac;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .title {

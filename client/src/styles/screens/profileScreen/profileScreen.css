@@ -72,8 +72,9 @@
 }
 
 .profile__left--form button {
-  background: #008cff;
-  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7dfa5), to(#f0c14b));
+  background-image: linear-gradient(#f7dfa5, #f0c14b);
+  color: #111;
   font-weight: 600;
   display: block;
   width: 96%;
