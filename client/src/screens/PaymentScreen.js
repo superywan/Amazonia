@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { savePaymentMethod } from "../redux/actions/cartActions";
+import "../styles/screens/paymentScreen/paymentScreen.css";
 
 const ShippingScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
@@ -25,16 +26,16 @@ const ShippingScreen = ({ history }) => {
       <h1 className="payment__title">Payment Method</h1>
       <form className="payment__form" onSubmit={submitHandler}>
         <label className="payment__form--label" htmlFor="paypal">
-          Paypal
+          Paypal or Credit Card
+          <input
+            className="payment__form--input"
+            type="radio"
+            name="payment"
+            value="Paypal"
+            onChange={(e) => setPaymentMethod(e.target.value)}
+            checked
+          />
         </label>
-        <input
-          className="payment__form--input"
-          type="radio"
-          name="payment"
-          value="Paypal"
-          onChange={(e) => setPaymentMethod(e.target.value)}
-          checked
-        />
         {/* <input
           className="payment__form--input"
           type="radio"

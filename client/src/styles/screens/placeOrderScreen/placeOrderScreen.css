@@ -1,0 +1,118 @@
+.placeorder {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.placeorder__left {
+  width: 70%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 10px 12px;
+}
+
+.placeorder__left hr {
+  margin: 20px 0;
+}
+
+.placeorder__left--info .infoItems__name {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.placeorder__left--info .infoItems__info {
+  margin-bottom: 20px;
+}
+
+.placeorder__left--items__title {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.placeorder__left--items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.placeorder__left--items .item__image {
+  width: 10%;
+}
+
+.placeorder__left--items .item__name {
+  margin-left: 3%;
+  text-decoration: underline;
+}
+
+.placeorder__left--items .item__price {
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.placeorder__right {
+  width: 23%;
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 10px 12px;
+}
+
+.placeorder__right--title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.placeorder__right--summary .summary-price {
+  margin: 20px 0;
+}
+
+.placeorder__right--submit {
+  width: 100%;
+  height: 35px;
+  color: #111;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7dfa5), to(#f0c14b));
+  background-image: linear-gradient(#f7dfa5, #f0c14b);
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 3%;
+  padding: 3px 5px;
+  cursor: pointer;
+  border: 1px solid #a2a6ac;
+}
+
+.placeorder__right--submit:hover {
+  background: #f5d68b;
+}
+
+@media (max-width: 1200px) {
+  .placeorder {
+    width: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .placeorder__left {
+    width: 90%;
+    max-width: none;
+    margin: auto;
+  }
+  .placeorder__right {
+    width: 90%;
+    margin: 15px auto 30px;
+  }
+}
+/*# sourceMappingURL=placeOrderScreen.css.map */

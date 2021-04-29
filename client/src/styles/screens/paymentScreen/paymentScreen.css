@@ -1,0 +1,53 @@
+.payment {
+  width: 50%;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.payment__title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.payment__form {
+  width: 100%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.payment__form--label {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.payment__form--submit {
+  width: 90%;
+  max-width: 400px;
+  min-width: 300px;
+  height: 35px;
+  color: #111;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7dfa5), to(#f0c14b));
+  background-image: linear-gradient(#f7dfa5, #f0c14b);
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 3%;
+  padding: 3px 5px;
+  cursor: pointer;
+  border: 1px solid #a2a6ac;
+}
+
+.payment__form--submit:hover {
+  background: #f5d68b;
+}
+/*# sourceMappingURL=paymentScreen.css.map */

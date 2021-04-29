@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createOrder } from "../redux/actions/orderActions";
+import "../styles/screens/placeOrderScreen/placeOrderScreen.css";
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -50,21 +51,25 @@ const PlaceOrderScreen = ({ history }) => {
       <div className="placeorder__left">
         <div className="placeorder__left--info">
           <div className="infoItems">
-            <h2 className="infoItems__name">Address</h2>
+            <h2 className="infoItems__name">SHIPPING</h2>
             <div className="infoItems__info">
               {shippingAddress.address}, {shippingAddress.city},{" "}
               {shippingAddress.postalCode}, {shippingAddress.country}
             </div>
+            <hr />
           </div>
+
           <div className="infoItems">
-            <h3 className="infoItems__name">Payment Method</h3>
+            <h2 className="infoItems__name">PAYMENT METHOD</h2>
             <div className="infoItems__info">{paymentMethod}</div>
           </div>
         </div>
+        <hr />
         {cartItems.length === 0 ? (
           <h3 className="placeorder__left--empty">Your cart is empty</h3>
         ) : (
           <div className="placeorder__left--items">
+            <h2 className="placeorder__left--items__title">CART ITEMS</h2>
             {cartItems.map((item, index) => (
               <div key={index} className="item">
                 <img className="item__image" src={item.image} alt={item.name} />
@@ -81,12 +86,20 @@ const PlaceOrderScreen = ({ history }) => {
         )}
       </div>
       <div className="placeorder__right">
-        <h2 className="placeorder__right--title">Order Summary</h2>
+        <h2 className="placeorder__right--title">ORDER SUMMARY</h2>
         <div className="placeorder__right--summary">
-          <div>Items: ${cart.itemsPrice}</div>
-          <div>Shipping: ${cart.shippingPrice}</div>
-          <div>Tax: ${cart.taxPrice}</div>
-          <div>Total: ${cart.totalPrice}</div>
+          <div className="summary-price">
+            <strong>Items:</strong> ${cart.itemsPrice}
+          </div>
+          <div className="summary-price">
+            <strong>Shipping:</strong> ${cart.shippingPrice}
+          </div>
+          <div className="summary-price">
+            <strong>Tax:</strong> ${cart.taxPrice}
+          </div>
+          <div className="summary-price">
+            <strong>Total:</strong> ${cart.totalPrice}
+          </div>
         </div>
         {error && <h3 className="placeorder__right--error">{error}</h3>}
         <button

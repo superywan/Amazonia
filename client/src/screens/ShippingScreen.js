@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { saveShippingAddress } from "../redux/actions/cartActions";
+import "../styles/screens/shippingScreen/shippingScreen.css";
 
 const ShippingScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);

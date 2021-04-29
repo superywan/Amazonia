@@ -1,0 +1,44 @@
+.payment {
+  width: 50%;
+  margin: auto;
+  margin-top: 3%;
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  &__form {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &--label {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &--submit {
+      width: 90%;
+      max-width: 400px;
+      min-width: 300px;
+      height: 35px;
+      color: #111;
+      font-weight: 600;
+      background-image: linear-gradient(rgb(247, 223, 165), rgb(240, 193, 75));
+      border: none;
+      border-radius: 3px;
+      margin-bottom: 3%;
+      padding: 3px 5px;
+      cursor: pointer;
+      border: 1px solid rgb(162, 166, 172);
+
+      &:hover {
+        background: rgb(245, 214, 139);
+      }
+    }
+  }
+}
