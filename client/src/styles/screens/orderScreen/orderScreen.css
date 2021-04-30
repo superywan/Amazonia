@@ -4,6 +4,20 @@
   margin: 3% auto;
 }
 
+.order__loading {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.order__error {
+  width: 90%;
+  color: #712b29;
+  background-color: #f7dddc;
+  border-color: #f4cfce;
+  margin: auto;
+  padding: 10px 15px;
+}
+
 .order__content {
   display: -webkit-box;
   display: -ms-flexbox;

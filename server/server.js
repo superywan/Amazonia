@@ -29,6 +29,11 @@ app.use("/api/users", userRoutes);
 // Order Routes
 app.use("/api/orders", orderRoutes);
 
+// Route to Access PAYPAL_CLIENT_ID enviorment variable
+app.get("/api/config/paypal", (req, res) =>
+  res.send(process.env.PAYPAL_CLIENT_ID)
+);
+
 // Error Handling Middlewares
 app.use(notFound);
 app.use(errorHandler);
