@@ -93,6 +93,7 @@
 
 @media (max-width: 1286px) {
   .profile {
+    margin: auto;
     width: 80%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

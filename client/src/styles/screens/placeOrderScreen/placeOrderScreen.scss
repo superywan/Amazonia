@@ -1,8 +1,7 @@
 .placeorder {
   width: 80%;
   max-width: 1200px;
-  margin: auto;
-  margin-top: 3%;
+  margin: 3% auto;
   display: flex;
   justify-content: space-between;
 
@@ -60,6 +59,7 @@
 
   &__right {
     width: 23%;
+    height: 50%;
     padding: 10px;
     border: 1px solid #bdbdbd;
     border-radius: 5px;

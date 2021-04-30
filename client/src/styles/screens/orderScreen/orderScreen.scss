@@ -1,0 +1,131 @@
+.order {
+  width: 80%;
+  max-width: 1200px;
+  margin: 3% auto;
+
+  &__loading {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  &__error {
+    width: 90%;
+    color: #712b29;
+    background-color: #f7dddc;
+    border-color: #f4cfce;
+    margin: auto;
+    padding: 10px 15px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &--left {
+      width: 70%;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+      padding: 10px 12px;
+
+      .infoItems {
+        &__name {
+          margin: 0;
+          margin-bottom: 10px;
+        }
+
+        &__info {
+          margin-bottom: 20px;
+        }
+      }
+
+      .items {
+        &__title {
+          margin: 0;
+          margin-bottom: 15px;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          margin-bottom: 10px;
+
+          &__image {
+            width: 10%;
+          }
+
+          &__name {
+            margin-left: 3%;
+            text-decoration: underline;
+          }
+
+          &__price {
+            margin-left: 20px;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+
+    &--right {
+      width: 23%;
+      height: 50%;
+      padding: 10px;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+      padding: 10px 12px;
+
+      &--title {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      &--price {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+.success {
+  width: 90%;
+  color: #27633c;
+  background-color: #dbf2e3;
+  border-color: #cdedd8;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 10px 15px;
+}
+
+.fail {
+  width: 90%;
+  color: #712b29;
+  background-color: #f7dddc;
+  border-color: #f4cfce;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 10px 15px;
+}
+
+@media (max-width: 1200px) {
+  .order__title {
+    font-size: 120%;
+    text-align: center;
+  }
+
+  .order__content {
+    width: 100%;
+    flex-direction: column;
+
+    &--left {
+      width: 90%;
+      max-width: none;
+      margin: auto;
+    }
+
+    &--right {
+      width: 90%;
+      margin: 15px auto 30px;
+    }
+  }
+}
