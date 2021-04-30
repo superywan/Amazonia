@@ -75,6 +75,44 @@
     margin-left: 15px;
     padding: 10px 12px;
     border-radius: 5px;
+
+    &--orders {
+      .ordersItem {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        padding: 15px 10px;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+
+        &__index {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        &__isPaid,
+        &__isDelivered {
+          &--true {
+            font-weight: 700;
+            color: #169e46;
+          }
+          &--false {
+            font-weight: 700;
+            color: #d82c26;
+          }
+        }
+
+        &__link {
+          font-weight: 600;
+          background-image: linear-gradient(#f7dfa5, #f0c14b);
+          padding: 5px 10px;
+          border: 1px solid #a2a6ac;
+          border-radius: 5px;
+        }
+      }
+    }
   }
 }
 
@@ -93,7 +131,18 @@
     &__right {
       width: 90%;
       margin: auto;
-      margin-top: 15px;
+
+      &--orders {
+        .ordersItem {
+          &__id,
+          &__isPaid--true,
+          &__isPaid--false,
+          &__isDelivered--true,
+          &__isDelivered--false {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

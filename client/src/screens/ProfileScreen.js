@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   getUserProfile,
   updateUserProfile,
 } from "../redux/actions/userActions";
+import { getMyOrders } from "../redux/actions/orderActions";
 import { USER_PROFILE_UPDATE_RESET } from "../redux/constants/userConstants";
 import "../styles/screens/profileScreen/profileScreen.css";
 
@@ -25,6 +27,9 @@ const ProfileScreen = ({ location, history }) => {
   const userProfileUpdate = useSelector((state) => state.userProfileUpdate);
   const { success } = userProfileUpdate;
 
+  const orderListMy = useSelector((state) => state.orderListMy);
+  const { loading: loadingListMy, error: errorListMy, orders } = orderListMy;
+
   useEffect(() => {
     if (!userInfo) {
       history.push("/login");
@@ -32,6 +37,7 @@ const ProfileScreen = ({ location, history }) => {
       if (!user || !user.name || success) {
         dispatch({ type: USER_PROFILE_UPDATE_RESET });
         dispatch(getUserProfile("profile"));
+        dispatch(getMyOrders());
       } else {
         setName(user.name);
         setEmail(user.email);
@@ -95,6 +101,39 @@ const ProfileScreen = ({ location, history }) => {
       </div>
       <div className="profile__right">
         <h2 className="profile__right--title">Your Orders</h2>
+        {loadingListMy ? (
+          <h3>Loading...</h3>
+        ) : errorListMy ? (
+          <h3>{errorListMy}</h3>
+        ) : (
+          <div className="profile__right--orders">
+            {orders.map((order, index) => (
+              <div key={order.id} className="ordersItem">
+                <div className="ordersItem__index">{index + 1}</div>
+                <div className="ordersItem__id">{order._id}</div>
+                <div className="ordersItem__createdAt">
+                  {order.createdAt.substring(0, 10)}
+                </div>
+                <div className="ordersItem__total">${order.totalPrice}</div>
+                {order.isPaid ? (
+                  <div className="ordersItem__isPaid--true">Paid</div>
+                ) : (
+                  <div className="ordersItem__isPaid--false">Not Paid</div>
+                )}
+                {order.isDelivered ? (
+                  <div className="ordersItem__isDelivered--true">Delivered</div>
+                ) : (
+                  <div className="ordersItem__isDelivered--false">
+                    Not Delivered
+                  </div>
+                )}
+                <div className="ordersItem__link">
+                  <Link to={`/order/${order._id}`}>Details</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
