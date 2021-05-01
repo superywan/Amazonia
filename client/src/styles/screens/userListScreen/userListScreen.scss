@@ -1,0 +1,34 @@
+.userList {
+  width: 70%;
+  max-width: 1400px;
+  margin: 3% auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__loading,
+  &__error {
+    text-align: center;
+  }
+
+  &__users {
+    &--user {
+      display: grid;
+      margin-bottom: 10px;
+      grid-template-columns: 5% 30% 15% 25% 15% 5% 5%;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid rgb(162, 166, 172);
+      border-radius: 5px;
+
+      .user__delete {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}

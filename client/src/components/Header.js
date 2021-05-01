@@ -43,6 +43,22 @@ const Header = () => {
               <div className="header__right--signIn">Sign In</div>
             </Link>
           )}
+          {userInfo && userInfo.isAdmin && (
+            <div className="header__right--dropdown">
+              <button className="dropdown__button">Dashboard</button>
+              <ul className="dropdown__content">
+                <li className="dropdown__content--item">
+                  <Link to="/admin/userlist">Users</Link>
+                </li>
+                <li className="dropdown__content--item">
+                  <Link to="/admin/productlist">Products</Link>
+                </li>
+                <li className="dropdown__content--item">
+                  <Link to="/admin/orderlist">Orders</Link>
+                </li>
+              </ul>
+            </div>
+          )}
           <Link to="/cart">
             <div className="header__right--cart">Cart</div>
           </Link>

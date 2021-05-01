@@ -1,0 +1,44 @@
+.userList {
+  width: 70%;
+  max-width: 1400px;
+  margin: 3% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.userList__loading, .userList__error {
+  text-align: center;
+}
+
+.userList__users--user {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 10px;
+  -ms-grid-columns: 5% 30% 15% 25% 15% 5% 5%;
+      grid-template-columns: 5% 30% 15% 25% 15% 5% 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #a2a6ac;
+  border-radius: 5px;
+}
+
+.userList__users--user .user__delete {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+/*# sourceMappingURL=userListScreen.css.map */

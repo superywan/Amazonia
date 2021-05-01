@@ -25,3 +25,12 @@ export const protect = asyncHandler(async (req, res, next) => {
     throw new Error("Not Authorized : No Token");
   }
 });
+
+export const checkAdmin = (req, res, next) => {
+  if (req.user && req.user.isAdmin) {
+    next();
+  } else {
+    res.status(401);
+    throw new Error("Not Authorized : Not an Admin");
+  }
+};
