@@ -1,0 +1,54 @@
+.orderList {
+  width: 70%;
+  max-width: 1400px;
+  margin: 3% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.orderList__loading, .orderList__error {
+  text-align: center;
+}
+
+.orderList__orders--order {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 10px;
+  -ms-grid-columns: 5% 20% 15% 15% 10% 15% 15% 5%;
+      grid-template-columns: 5% 20% 15% 15% 10% 15% 15% 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #a2a6ac;
+  border-radius: 5px;
+}
+
+.orderList__orders--order .index {
+  font-weight: 700;
+}
+
+.orderList__orders--order .paidAt--true,
+.orderList__orders--order .deliveredAt--true {
+  font-weight: 600;
+  color: #169e46;
+}
+
+.orderList__orders--order .paidAt--false,
+.orderList__orders--order .deliveredAt--false {
+  font-weight: 600;
+  color: #d82c26;
+}
+/*# sourceMappingURL=orderListScreen.css.map */

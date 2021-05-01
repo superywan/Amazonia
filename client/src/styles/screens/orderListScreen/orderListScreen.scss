@@ -1,0 +1,44 @@
+.orderList {
+  width: 70%;
+  max-width: 1400px;
+  margin: 3% auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__loading,
+  &__error {
+    text-align: center;
+  }
+
+  &__orders {
+    &--order {
+      display: grid;
+      margin-bottom: 10px;
+      grid-template-columns: 5% 20% 15% 15% 10% 15% 15% 5%;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid rgb(162, 166, 172);
+      border-radius: 5px;
+
+      .index {
+        font-weight: 700;
+      }
+
+      .paidAt--true,
+      .deliveredAt--true {
+        font-weight: 600;
+        color: #169e46;
+      }
+
+      .paidAt--false,
+      .deliveredAt--false {
+        font-weight: 600;
+        color: #d82c26;
+      }
+    }
+  }
+}

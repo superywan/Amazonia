@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile, updateUser } from "../redux/actions/userActions";
 import { USER_UPDATE_RESET } from "../redux/constants/userConstants";
@@ -51,10 +50,12 @@ const UserEditScreen = ({ match, history }) => {
   return (
     <div className="userUpdate">
       <h1 className="userUpdate__title">Update User</h1>
-      {userUpdateLoading ? (
+      {userUpdateLoading || userDetailsLoading ? (
         <h3 className="userUpdate__loading">Loading...</h3>
-      ) : userUpdateError ? (
-        <h3 className="userUpdate__error">{userUpdateError}</h3>
+      ) : userUpdateError || userDetailsError ? (
+        <h3 className="userUpdate__error">
+          {userUpdateError || userDetailsError}
+        </h3>
       ) : (
         <form className="userUpdate__form" onSubmit={submitHandler}>
           <label className="userUpdate__form--label" htmlFor="name">

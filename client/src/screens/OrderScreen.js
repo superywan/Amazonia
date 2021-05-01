@@ -3,22 +3,38 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { PayPalButton } from "react-paypal-button-v2";
-import { getOrderDetails, payOrder } from "../redux/actions/orderActions";
-import { ORDER_PAY_RESET } from "../redux/constants/orderConstants";
+import {
+  deliverOrder,
+  getOrderDetails,
+  payOrder,
+} from "../redux/actions/orderActions";
+import {
+  ORDER_DELIVER_RESET,
+  ORDER_PAY_RESET,
+} from "../redux/constants/orderConstants";
 import "../styles/screens/orderScreen/orderScreen.css";
 
-const OrderScreen = ({ match }) => {
+const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
 
   const [sdkReady, setSdkReady] = useState(false);
 
   const dispatch = useDispatch();
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
   const orderDetails = useSelector((state) => state.orderDetails);
-  const { order, loading, error } = orderDetails;
+  const { loading, error, order } = orderDetails;
 
   const orderPay = useSelector((state) => state.orderPay);
   const { loading: loadingOrderPay, success: successOrderPay } = orderPay;
+
+  const orderDeliver = useSelector((state) => state.orderDeliver);
+  const {
+    loading: loadingOrderDeliver,
+    success: successOrderDeliver,
+  } = orderDeliver;
 
   const showDecimals = (num) => (Math.round(num * 100) / 100).toFixed(2);
   if (!loading) {
@@ -31,9 +47,12 @@ const OrderScreen = ({ match }) => {
   }
 
   useEffect(() => {
+    if (!userInfo) {
+      history.push("/login");
+    }
+
     const addPaypalScript = async () => {
       const { data: clientId } = await axios.get("/api/config/paypal");
-      console.log(clientId);
       const paypalSDKscript = document.createElement("script");
       paypalSDKscript.type = "text/javascript";
       paypalSDKscript.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`;
@@ -44,8 +63,14 @@ const OrderScreen = ({ match }) => {
       document.body.appendChild(paypalSDKscript);
     };
 
-    if (!order || successOrderPay || order._id !== orderId) {
+    if (
+      !order ||
+      successOrderPay ||
+      successOrderDeliver ||
+      order._id !== orderId
+    ) {
       dispatch({ type: ORDER_PAY_RESET });
+      dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
     } else if (!order.isPaid) {
       if (!window.paypal) {
@@ -54,11 +79,22 @@ const OrderScreen = ({ match }) => {
         setSdkReady(true);
       }
     }
-  }, [dispatch, order, orderId, successOrderPay]);
+  }, [
+    dispatch,
+    history,
+    userInfo,
+    order,
+    orderId,
+    successOrderPay,
+    successOrderDeliver,
+  ]);
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult);
     dispatch(payOrder(orderId, paymentResult));
+  };
+
+  const successDeliverHandler = () => {
+    dispatch(deliverOrder(order));
   };
 
   return loading ? (
@@ -152,6 +188,21 @@ const OrderScreen = ({ match }) => {
                 />
               )}
             </div>
+          )}
+          {loadingOrderDeliver ? (
+            <h3 className="order__loading">Loading...</h3>
+          ) : (
+            userInfo &&
+            userInfo.isAdmin &&
+            order.isPaid &&
+            !order.isDelivered && (
+              <button
+                className="order__markAsDelivered"
+                onClick={successDeliverHandler}
+              >
+                Mark as Delivered 🚀
+              </button>
+            )
           )}
         </div>
       </div>
