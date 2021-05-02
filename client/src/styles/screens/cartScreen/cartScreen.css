@@ -127,6 +127,9 @@
     max-width: none;
     margin: auto;
   }
+  .cart__left .product__image {
+    margin: auto;
+  }
   .cart__right {
     width: 93%;
     margin: 15px auto 30px;

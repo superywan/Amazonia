@@ -120,6 +120,10 @@
       width: 90%;
       max-width: none;
       margin: auto;
+
+      .product__image {
+        margin: auto;
+      }
     }
 
     &__right {
