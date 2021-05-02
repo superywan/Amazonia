@@ -3,6 +3,8 @@ import asyncHandler from "express-async-handler";
 
 import User from "../models/userModel.js";
 
+// Authorize User with JWT
+// ( Check user has JWT token and if it has, set "req.user" with user info )
 export const protect = asyncHandler(async (req, res, next) => {
   let token;
   const auth = req.headers.authorization;

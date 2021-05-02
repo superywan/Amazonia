@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserList, deleteUser } from "../redux/actions/userActions";
-import "../styles/screens/userListScreen/userListScreen.css";
+import { getUserList, deleteUser } from "../../redux/actions/userActions";
+import "../../styles/screens/userListScreen/userListScreen.css";
 
 const UserListScreen = ({ history }) => {
   const dispatch = useDispatch();

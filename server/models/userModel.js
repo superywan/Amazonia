@@ -27,10 +27,12 @@ const userSchema = mongoose.Schema(
   }
 );
 
+// Check User Input Password with Correct Password
 userSchema.methods.isPwdMatch = async function (inputPwd) {
   return await bcrypt.compare(inputPwd, this.password);
 };
 
+// When Password Modified, Hash it (bcrypt)
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     next();

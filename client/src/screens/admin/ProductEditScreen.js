@@ -3,11 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   listProductDetails,
   updateProduct,
-} from "../redux/actions/productActions";
-import { getUserProfile, updateUser } from "../redux/actions/userActions";
-import { PRODUCT_UPDATE_RESET } from "../redux/constants/productConstants";
-import { USER_UPDATE_RESET } from "../redux/constants/userConstants";
-import "../styles/screens/productEditScreen/productEditScreen.css";
+} from "../../redux/actions/productActions";
+import { PRODUCT_UPDATE_RESET } from "../../redux/constants/productConstants";
+import "../../styles/screens/productEditScreen/productEditScreen.css";
 
 const ProductEditScreen = ({ match, history }) => {
   const productId = match.params.id;

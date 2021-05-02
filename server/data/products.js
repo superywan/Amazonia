@@ -1,3 +1,4 @@
+// Testing Products Data
 const products = [
   {
     name: "Airpods Wireless Bluetooth Headphones",

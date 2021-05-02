@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getOrders } from "../redux/actions/orderActions";
-import "../styles/screens/orderListScreen/orderListScreen.css";
+import { getOrders } from "../../redux/actions/orderActions";
+import "../../styles/screens/orderListScreen/orderListScreen.css";
 
 const OrderListScreen = ({ history }) => {
   const dispatch = useDispatch();

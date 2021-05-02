@@ -5,9 +5,9 @@ import {
   createProduct,
   deleteProduct,
   listProducts,
-} from "../redux/actions/productActions";
-import { PRODUCT_CREATE_RESET } from "../redux/constants/productConstants";
-import "../styles/screens/productListScreen/productListScreen.css";
+} from "../../redux/actions/productActions";
+import { PRODUCT_CREATE_RESET } from "../../redux/constants/productConstants";
+import "../../styles/screens/productListScreen/productListScreen.css";
 
 const ProductListScreen = ({ history }) => {
   const dispatch = useDispatch();

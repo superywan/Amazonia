@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserProfile, updateUser } from "../redux/actions/userActions";
-import { USER_UPDATE_RESET } from "../redux/constants/userConstants";
-import "../styles/screens/userEditScreen/userEditScreen.css";
+import { getUserProfile, updateUser } from "../../redux/actions/userActions";
+import { USER_UPDATE_RESET } from "../../redux/constants/userConstants";
+import "../../styles/screens/userEditScreen/userEditScreen.css";
 
 const UserEditScreen = ({ match, history }) => {
   const userId = match.params.id;
