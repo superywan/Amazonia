@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import colors from "colors";
 
 // Connecting To MongoDB Atlas
 const connectDB = async () => {
