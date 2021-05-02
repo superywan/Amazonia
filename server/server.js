@@ -7,6 +7,7 @@ import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import { RSA_NO_PADDING } from "constants";
 
 // Access to .env file
 dotenv.config();
@@ -19,10 +20,6 @@ app.use(express.json());
 
 // Connecting to MongoDB
 connectDB();
-
-app.get("/", (req, res) => {
-  res.send("THIS IS API FOR AMAZON CLONE APPLICATION");
-});
 
 // Route to Access PAYPAL_CLIENT_ID enviorment variable
 app.get("/api/config/paypal", (req, res) =>
@@ -43,6 +40,17 @@ app.use("/api/orders", orderRoutes);
 
 // Upload Image Route for Creating New Product
 app.use("/api/upload", uploadRoutes);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/client/build")));
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("THIS IS API FOR AMAZON CLONE APPLICATION");
+  });
+}
 
 // Error Handling Middlewares
 app.use(notFound);
