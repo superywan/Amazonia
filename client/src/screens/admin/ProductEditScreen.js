@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -70,6 +71,22 @@ const ProductEditScreen = ({ match, history }) => {
     );
   };
 
+  const uploadFileHandler = async (e) => {
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append("image", file);
+    setUploading(true);
+    try {
+      const config = { headers: { "Content-Type": "multipart/form-data" } };
+      const { data } = await axios.post("/api/upload", formData, config);
+      setImage(data);
+      setUploading(false);
+    } catch (error) {
+      console.error(error);
+      setUploading(false);
+    }
+  };
+
   return (
     <div className="productUpdate">
       <h1 className="productUpdate__title">Edit Product</h1>
@@ -113,6 +130,13 @@ const ProductEditScreen = ({ match, history }) => {
             value={image}
             onChange={(e) => setImage(e.target.checked)}
           />
+          <input
+            className="productUpdate__form--input"
+            type="file"
+            label="Choose File"
+            onChange={uploadFileHandler}
+          />
+          {uploading && <h3 className="productUpdate__loading">Loading...</h3>}
 
           <label className="productUpdate__form--label" htmlFor="brand">
             Brand

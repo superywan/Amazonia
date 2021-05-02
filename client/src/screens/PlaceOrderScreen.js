@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createOrder } from "../redux/actions/orderActions";
 import "../styles/screens/placeOrderScreen/placeOrderScreen.css";
+import { USER_PROFILE_DETAILS_RESET } from "../redux/constants/userConstants";
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const PlaceOrderScreen = ({ history }) => {
   useEffect(() => {
     if (success) {
       history.push(`/order/${order._id}`);
+      dispatch({ type: USER_PROFILE_DETAILS_RESET });
     }
   });
 
