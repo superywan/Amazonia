@@ -1,4 +1,4 @@
-.userUpdate {
+.productUpdate {
   width: 50%;
   margin: auto;
   margin-top: 3%;
@@ -78,21 +78,6 @@
 
       &:hover {
         background: rgb(245, 214, 139);
-      }
-    }
-  }
-
-  &__login {
-    font-size: 13px;
-    text-align: center;
-
-    &--link {
-      color: rgb(0, 102, 192);
-
-      &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-        color: #c45500;
       }
     }
   }

@@ -45,9 +45,11 @@ const UserListScreen = ({ history }) => {
               <div className="user__id">{user._id}</div>
               <div className="user__name">{user.name}</div>
               <div className="user__email">{user.email}</div>
-              <div className="user__isAdmin">
-                Is Admin? {user.isAdmin ? "✅" : "❌"}
-              </div>
+              {user.isAdmin ? (
+                <div className="user__isAdmin">Admin</div>
+              ) : (
+                <div className="user__isAdmin">User</div>
+              )}
               <Link
                 className="user__update"
                 to={`/admin/user/${user._id}/edit`}

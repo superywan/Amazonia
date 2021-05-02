@@ -1,4 +1,4 @@
-.userList {
+.productList {
   width: 70%;
   max-width: 1400px;
   margin: 3% auto;
@@ -16,16 +16,33 @@
           justify-content: center;
 }
 
-.userList__loading, .userList__error {
+.productList__create {
+  color: #111;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7dfa5), to(#f0c14b));
+  background-image: linear-gradient(#f7dfa5, #f0c14b);
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 2%;
+  padding: 15px;
+  cursor: pointer;
+  border: 1px solid #a2a6ac;
+}
+
+.productList__create:hover {
+  background: #f5d68b;
+}
+
+.productList__loading, .productList__error {
   text-align: center;
 }
 
-.userList__users--user {
+.productList__product {
   display: -ms-grid;
   display: grid;
   margin-bottom: 10px;
-  -ms-grid-columns: 5% 30% 15% 25% 15% 5% 5%;
-      grid-template-columns: 5% 30% 15% 25% 15% 5% 5%;
+  -ms-grid-columns: 5% 30% 25% 10% 10% 10% 5% 5%;
+      grid-template-columns: 5% 30% 25% 10% 10% 10% 5% 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -36,25 +53,25 @@
   border-radius: 5px;
 }
 
-.userList__users--user .user__index {
+.productList .product__index {
   font-weight: 700;
 }
 
-.userList__users--user .user__delete {
+.productList .product__delete {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
 @media (max-width: 1286px) {
-  .userList__users--user {
+  .productList__product {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 10% 40% 30% 10% 10%;
-        grid-template-columns: 10% 40% 30% 10% 10%;
+    -ms-grid-columns: 10% 50% 20% 10% 10%;
+        grid-template-columns: 10% 50% 20% 10% 10%;
   }
-  .user__id, .user__email {
+  .product__id, .product__category, .product__brand {
     display: none;
   }
 }
-/*# sourceMappingURL=userListScreen.css.map */
+/*# sourceMappingURL=productListScreen.css.map */

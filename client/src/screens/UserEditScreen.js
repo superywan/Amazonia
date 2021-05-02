@@ -49,7 +49,7 @@ const UserEditScreen = ({ match, history }) => {
 
   return (
     <div className="userUpdate">
-      <h1 className="userUpdate__title">Update User</h1>
+      <h1 className="userUpdate__title">Edit User</h1>
       {userUpdateLoading || userDetailsLoading ? (
         <h3 className="userUpdate__loading">Loading...</h3>
       ) : userUpdateError || userDetailsError ? (

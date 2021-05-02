@@ -1,15 +1,15 @@
-.userUpdate {
+.productUpdate {
   width: 50%;
   margin: auto;
   margin-top: 3%;
 }
 
-.userUpdate__title {
+.productUpdate__title {
   text-align: center;
   font-size: 28px;
 }
 
-.userUpdate__error {
+.productUpdate__error {
   max-width: 300px;
   color: #712b29;
   text-align: center;
@@ -20,18 +20,18 @@
   margin-bottom: 1rem;
 }
 
-.userUpdate__message {
+.productUpdate__message {
   color: #c40000;
   font-size: 12px;
   text-align: left;
   margin: 5px 0 10px;
 }
 
-.userUpdate__loading {
+.productUpdate__loading {
   text-align: center;
 }
 
-.userUpdate__form {
+.productUpdate__form {
   width: 80%;
   max-width: 400px;
   margin: auto;
@@ -47,7 +47,7 @@
           align-items: center;
 }
 
-.userUpdate__form--label {
+.productUpdate__form--label {
   font-size: 13px;
   font-weight: 700;
   width: 80%;
@@ -57,7 +57,7 @@
   margin-bottom: 5px;
 }
 
-.userUpdate__form--input {
+.productUpdate__form--input {
   width: 80%;
   max-width: 400px;
   min-width: 200px;
@@ -68,11 +68,11 @@
   border-radius: 3px;
 }
 
-.userUpdate__form--check {
+.productUpdate__form--check {
   margin-bottom: 15px;
 }
 
-.userUpdate__form--submit {
+.productUpdate__form--submit {
   width: 83%;
   max-width: 400px;
   min-width: 212px;
@@ -87,22 +87,7 @@
   cursor: pointer;
 }
 
-.userUpdate__form--submit:hover {
+.productUpdate__form--submit:hover {
   background: #f5d68b;
 }
-
-.userUpdate__login {
-  font-size: 13px;
-  text-align: center;
-}
-
-.userUpdate__login--link {
-  color: #0066c0;
-}
-
-.userUpdate__login--link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #c45500;
-}
-/*# sourceMappingURL=userEditScreen.css.map */
+/*# sourceMappingURL=productEditScreen.css.map */

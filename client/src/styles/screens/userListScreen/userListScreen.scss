@@ -24,11 +24,28 @@
       border: 1px solid rgb(162, 166, 172);
       border-radius: 5px;
 
+      .user__index {
+        font-weight: 700;
+      }
+
       .user__delete {
         border: none;
         background-color: transparent;
         cursor: pointer;
       }
+    }
+  }
+}
+
+@media (max-width: 1286px) {
+  .userList__users--user {
+    display: grid;
+    grid-template-columns: 10% 40% 30% 10% 10%;
+  }
+  .user {
+    &__id,
+    &__email {
+      display: none;
     }
   }
 }

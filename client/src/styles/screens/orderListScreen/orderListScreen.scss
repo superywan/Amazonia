@@ -42,3 +42,14 @@
     }
   }
 }
+
+@media (max-width: 1286px) {
+  .orderList__orders--order {
+    display: grid;
+    grid-template-columns: 5% 20% 20% 25% 25% 5%;
+    .id,
+    .name {
+      display: none;
+    }
+  }
+}
