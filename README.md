@@ -39,25 +39,9 @@ cd client
 npm install
 ```
 
-### Setting Up Environment Variable
-
-```
-NODE_ENV = development
-PORT = 5000
-MONGO_URI = "WIRE UR MONGODB ATLAS"
-JWT_SECRET = "ANY STRING YOU WANT AS A JWT PASSWORD"
-PAYPAL_CLIENT_ID = "UR PAYPAL API CLIENT ID"
-```
-
 ### Run
 
 ```bash
 # Run both client and server concurrently
 npm run dev
 ```
-
-## Task List (Feel free to make pull request 🥺)
-
-[ ] Leave review on product  
-[ ] Seach bar on top  
-[ ] Moblie friendly website
