@@ -2,7 +2,7 @@
 
 ![Current Version](https://img.shields.io/github/last-commit/superywan/amazon-clone) [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://amazoncloneapp.herokuapp.com/) ![Follow Me](https://img.shields.io/github/followers/superywan?style=social) ![](https://img.shields.io/github/stars/superywan/amazon-clone?style=social)
 
-Almost Completely Built From Scratch with RESTful E-commerce Website Design Inspired From [Amazon.com](https://www.amazon.com/) 🛒
+Fully functioning e-commerce website which has every essential feature for online shopping (user authentication, shopping cart, payment with Paypal API, admin dashboard) design inspired from Amazon.com.
 
 ![Main Page](https://i.imgur.com/nc4rw1o.png)
 
